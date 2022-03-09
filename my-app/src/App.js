@@ -1,16 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
 import StatefulGreeting from './components/StatefulGreeting.js';
-import NavBar from './components/NavBar';
+import Header from './components/Header';
+import Form from './components/Form';
+import Home from './components/Home';
 
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      <Header logo="React Portfolio"/>
+      <Home/>
       <StatefulGreeting greeting="Matthew"/>
+      <Form/>
     </div>
   );
 }
+
 
 export default App;

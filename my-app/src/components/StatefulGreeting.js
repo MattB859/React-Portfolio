@@ -11,13 +11,11 @@ class StatefulGreetingWithPrevState extends React.Component {
   }
 
   handleClick() {
-    this.setState((prevState, prevProps) => {
-      console.log("Previous State:", prevState);
-      console.log("Previous Props:", prevProps);
+    this.setState((prevState) => {
       return {
         introduction:
           prevState.introduction === "Hello!" ? "Goodbye!" : "Hello!",
-        buttonText: prevState.buttonText === "Exit" ? "Enter" : "Exit",
+          buttonText: prevState.buttonText === "Exit" ? "Enter" : "Exit",
       };
     });
   }
@@ -33,10 +31,6 @@ class StatefulGreetingWithPrevState extends React.Component {
   }
 
   incrementFive() {
-    this.increment();
-    this.increment();
-    this.increment();
-    this.increment();
     this.increment();
   }
 
